@@ -22,17 +22,19 @@ let crowdAge = [{
 
 // callback 函式
 function ageFilterCB(Filter_fun, arr) {
-    console.log('ageFilterCB-', Filter_fun(arr));
-    return Filter_fun(arr);
+    let filter_arr = Filter_fun(arr);
+    return filter_arr;
 }
 
 function ageFilter(arr) {
     /* 只能在此插入程式碼 */
-    return arr.filter(item => {
-        console.log('ageFilter-', item);
+    let new_arr = arr.filter(item => {
         return item.age > 18
-    })
+    });
+    return new_arr;
 }
+
+
 
 let filterResult = [];
 filterResult = ageFilterCB(ageFilter, crowdAge);
