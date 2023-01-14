@@ -21,17 +21,19 @@ let crowdAge = [{
 ];
 
 // callback 函式
-function ageFilterCB(cb, arr) {
-    return cb(arr);
+function ageFilterCB(Filter_fun, arr) {
+    console.log('ageFilterCB-', Filter_fun(arr));
+    return Filter_fun(arr);
 }
 
 function ageFilter(arr) {
     /* 只能在此插入程式碼 */
     return arr.filter(item => {
+        console.log('ageFilter-', item);
         return item.age > 18
     })
 }
 
 let filterResult = [];
 filterResult = ageFilterCB(ageFilter, crowdAge);
-console.log(filterResult); /* 為陣列，內容包含屬性 age > 18 的 crowdAge 元素 */
+console.log('filterResult-', filterResult); /* 為陣列，內容包含屬性 age > 18 的 crowdAge 元素 */
