@@ -12,6 +12,8 @@ console.log(newArr0);
 console.log(newArr1);
 console.log(newArr2);
 
+//下面作業正式開始
+
 const array = [{
         name: '小明',
         age: 18
